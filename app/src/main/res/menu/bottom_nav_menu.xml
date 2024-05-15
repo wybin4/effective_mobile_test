@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_air_tickets"
+        android:icon="@drawable/air_tickets"
+        android:title="@string/title_air_tickets" />
+
+    <item
+        android:id="@+id/navigation_hotels"
+        android:icon="@drawable/hotels"
+        android:title="@string/title_hotels" />
+
+    <item
+        android:id="@+id/navigation_brief"
+        android:icon="@drawable/brief"
+        android:title="@string/title_brief" />
+
+    <item
+        android:id="@+id/navigation_subscriptions"
+        android:icon="@drawable/subscriptions"
+        android:title="@string/title_subscriptions" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/profile"
+        android:title="@string/title_profile" />
+
+</menu>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Авиабилеты</string>
+    <string name="title_air_tickets">Авиабилеты</string>
+    <string name="title_hotels">Отели</string>
+    <string name="title_profile">Короче</string>
+    <string name="title_brief">Подписки</string>
+    <string name="title_subscriptions">Профиль</string>
+    <string name="h1_air_tickets">Поиск дешевых авиабилетов</string>
+    <string name="h2_air_tickets">Музыкально отлететь</string>
+    <string name="difficult_route">Сложный маршрут</string>
+    <string name="anywhere">Куда угодно</string>
+    <string name="weekend">Выходные</string>
+    <string name="hot_tickets">Горячие билеты</string>
+    <string name="straight_rails">Прямые рельсы</string>
+    <string name="view_all_tickets">Посмотреть все билеты</string>
+    <string name="show_all">Показать все</string>
+    <string name="back">обратно</string>
+    <string name="filter">фильтры</string>
+    <string name="price_chart">График цен</string>
+    <string name="slash">/</string>
+    <string name="dash">—</string>
+</resources>

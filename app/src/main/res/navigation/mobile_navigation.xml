@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_air_tickets">
+
+    <fragment
+        android:id="@+id/navigation_air_tickets"
+        android:name="com.example.airtickets.ui.airticket.AirTicketMainView"
+        android:label="@string/title_air_tickets"
+        tools:layout="@layout/air_ticket_main" />
+
+    <fragment
+        android:id="@+id/navigation_hotels"
+        android:label="@string/title_hotels"/>
+
+    <fragment
+        android:id="@+id/navigation_subscriptions"
+        android:label="@string/title_subscriptions" />
+
+    <fragment
+        android:id="@+id/navigation_brief"
+        android:label="@string/title_brief" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:label="@string/title_profile" />
+
+</navigation>

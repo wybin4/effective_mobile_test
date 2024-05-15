@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/BottomSheetDialog"
+        android:orientation="vertical"
+        android:paddingHorizontal="25dp"
+        android:paddingBottom="45dp">
+
+        <LinearLayout
+            style="@style/BottomSheetLabel"
+            android:layout_width="38dp"
+            android:layout_height="5dp"
+            android:background="@drawable/circle_16dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            />
+
+        <LinearLayout
+            style="@style/OuterSearchCard"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="18dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="24dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Title3"
+                android:text="Минск"
+                android:hint="Откуда - Москва"
+                android:drawableStart="@drawable/airplane"
+                android:drawablePadding="7dp"
+                android:background="@null"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey5"
+                android:layout_marginVertical="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/WhiteIconTitle3"
+                    android:layout_weight="1"
+                    android:hint="Куда - Турция"
+                    app:drawableStartCompat="@drawable/search"
+                    android:drawablePadding="14dp"
+                    android:background="@null"
+                    />
+
+                <ImageView
+                    style="@style/WhiteIcon"
+                    android:layout_gravity="center"
+                    android:src="@drawable/cross"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            >
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="16dp"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:cardCornerRadius="8dp"
+                    android:backgroundTint="@color/green"
+                    android:layout_marginBottom="7dp"
+                    >
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/difficult_route"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    style="@style/Text2"
+                    android:text="@string/difficult_route"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="16dp"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:cardCornerRadius="8dp"
+                    android:backgroundTint="@color/blue"
+                    android:layout_marginBottom="7dp"
+                    >
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/anywhere"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    style="@style/Text2"
+                    android:text="@string/anywhere"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="16dp"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:cardCornerRadius="8dp"
+                    android:backgroundTint="@color/dark_blue"
+                    android:layout_marginBottom="7dp"
+                    >
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/weekend"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    style="@style/Text2"
+                    android:text="@string/weekend"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <androidx.cardview.widget.CardView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:cardCornerRadius="8dp"
+                    android:backgroundTint="@color/red"
+                    android:layout_marginBottom="7dp"
+                    >
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/hot_tickets"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    style="@style/Text2"
+                    android:text="@string/hot_tickets"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/OuterSearchCard"
+            android:orientation="vertical"
+            android:paddingVertical="22dp"
+            android:paddingHorizontal="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginEnd="8dp"
+                    >
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/popular_destination_pic_1"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        style="@style/Title3"
+                        android:text="Стамбул"
+                        android:layout_marginBottom="-3dp"/>
+                    <TextView
+                        style="@style/Text"
+                        android:textColor="@color/grey5"
+                        android:text="Популярное направление"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey4"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="15dp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginEnd="8dp"
+                    >
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/popular_destination_pic_2"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        style="@style/Title3"
+                        android:text="Сочи"
+                        android:layout_marginBottom="-3dp"/>
+                    <TextView
+                        style="@style/Text"
+                        android:textColor="@color/grey5"
+                        android:text="Популярное направление"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey4"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="15dp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginEnd="8dp"
+                    >
+                    <ImageView
+                        android:scaleType="centerCrop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/popular_destination_pic_3"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        style="@style/Title3"
+                        android:text="Пхукет"
+                        android:layout_marginBottom="-3dp"/>
+                    <TextView
+                        style="@style/Text"
+                        android:textColor="@color/grey5"
+                        android:text="Популярное направление"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey4"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
