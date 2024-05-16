@@ -19,6 +19,7 @@
 - Не очень поняла как должна выглядеть заглушка на странице "Поиск", поэтому сделала просто кнопку с текстом.
 
 Скриншоты работы приложения:
+
 <img width="300px" src="https://github.com/wybin4/effective_mobile_test/blob/assets/1.png"/>
 <img width="300px" src="https://github.com/wybin4/effective_mobile_test/blob/assets/2.png"/>
 <img width="300px" src="https://github.com/wybin4/effective_mobile_test/blob/assets/2_stub.png"/>
