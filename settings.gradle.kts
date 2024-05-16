@@ -22,4 +22,3 @@ dependencyResolutionManagement {
 rootProject.name = "airtickets"
 include(":app")
 include(":data")
-include(":domain")

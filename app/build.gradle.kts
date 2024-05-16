@@ -40,7 +40,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":domain"))
     implementation(project(":data"))
 
     implementation(libs.androidx.core.ktx)
@@ -51,6 +50,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.recyclerview)
 
     implementation(libs.koin.android)
     implementation(libs.koin.core)

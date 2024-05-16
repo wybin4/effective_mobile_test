@@ -29,13 +29,11 @@
             android:paddingEnd="16dp"
             android:layout_marginBottom="24dp">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <TextView
+                android:id="@id/source"
                 style="@style/Title3"
-                android:text="Минск"
-                android:hint="Откуда - Москва"
-                android:drawableStart="@drawable/airplane"
                 android:drawablePadding="7dp"
-                android:background="@null"/>
+                app:drawableStartCompat="@drawable/airplane" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -49,15 +47,17 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    style="@style/WhiteIconTitle3"
+                    android:id="@+id/destination"
+                    style="@style/TextInputWhiteIcon3"
                     android:layout_weight="1"
-                    android:hint="Куда - Турция"
+                    android:hint="@string/default_destination"
                     app:drawableStartCompat="@drawable/search"
                     android:drawablePadding="14dp"
                     android:background="@null"
-                    />
+                    android:layout_width="0dp" />
 
                 <ImageView
+                    android:id="@+id/clear_destination"
                     style="@style/WhiteIcon"
                     android:layout_gravity="center"
                     android:src="@drawable/cross"/>
@@ -72,6 +72,7 @@
             android:layout_marginBottom="30dp"
             >
             <LinearLayout
+                android:id="@+id/difficult_route"
                 android:layout_height="wrap_content"
                 android:layout_width="70dp"
                 android:orientation="vertical"
@@ -101,6 +102,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/anywhere"
                 android:layout_height="wrap_content"
                 android:layout_width="70dp"
                 android:orientation="vertical"
@@ -130,7 +132,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_height="wrap_content"
+                android:id="@+id/weekend"
+                android:layout_height="match_parent"
                 android:layout_width="70dp"
                 android:orientation="vertical"
                 android:gravity="center"
@@ -159,6 +162,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/hot_tickets"
                 android:layout_height="wrap_content"
                 android:layout_width="70dp"
                 android:orientation="vertical"
@@ -188,16 +192,17 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/popular_destinations"
             style="@style/OuterSearchCard"
             android:orientation="vertical"
             android:paddingVertical="22dp"
             android:paddingHorizontal="16dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/istanbul"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="40dp"
@@ -219,12 +224,12 @@
                     android:orientation="vertical">
                     <TextView
                         style="@style/Title3"
-                        android:text="Стамбул"
+                        android:text="@string/istanbul"
                         android:layout_marginBottom="-3dp"/>
                     <TextView
                         style="@style/Text"
                         android:textColor="@color/grey5"
-                        android:text="Популярное направление"/>
+                        android:text="@string/popular_destination"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -237,10 +242,10 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/sochi"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="40dp"
@@ -262,12 +267,12 @@
                     android:orientation="vertical">
                     <TextView
                         style="@style/Title3"
-                        android:text="Сочи"
+                        android:text="@string/sochi"
                         android:layout_marginBottom="-3dp"/>
                     <TextView
                         style="@style/Text"
                         android:textColor="@color/grey5"
-                        android:text="Популярное направление"/>
+                        android:text="@string/popular_destination"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -280,10 +285,10 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/phuket"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="40dp"
@@ -305,20 +310,44 @@
                     android:orientation="vertical">
                     <TextView
                         style="@style/Title3"
-                        android:text="Пхукет"
+                        android:text="@string/phuket"
                         android:layout_marginBottom="-3dp"/>
                     <TextView
                         style="@style/Text"
                         android:textColor="@color/grey5"
-                        android:text="Популярное направление"/>
+                        android:text="@string/popular_destination"/>
                 </LinearLayout>
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/grey4"
                 android:layout_marginTop="8dp"/>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/stub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_marginVertical="50dp"
+            android:visibility="gone"
+            >
+            <TextView
+                style="@style/Text1"
+                android:text="@string/stub"/>
+
+            <TextView
+                android:id="@+id/back_from_stub"
+                style="@style/ButtonText1"
+                android:text="@string/back_from_stub"
+                android:paddingVertical="8dp"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:backgroundTint="@color/blue"
+                android:background="@drawable/circle_8dp"
+                android:layout_marginTop="30dp"/>
 
         </LinearLayout>
 

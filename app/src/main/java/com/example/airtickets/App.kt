@@ -2,8 +2,7 @@ package com.example.airtickets
 
 import android.app.Application
 import com.example.airtickets.di.appModule
-import com.example.airtickets.di.dataModule
-import com.example.airtickets.di.domainModule
+import com.example.data.di.dataModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -16,7 +15,7 @@ class App: Application() {
         startKoin {
             androidLogger(Level.DEBUG)
             androidContext(this@App)
-            modules(listOf(appModule, domainModule, dataModule))
+            modules(listOf(appModule, dataModule))
         }
     }
 }

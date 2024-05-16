@@ -16,6 +16,8 @@
                 style="@style/Title1"
                 android:text="@string/h1_air_tickets"
                 android:layout_gravity="center"
+                android:gravity="center"
+                android:maxWidth="172dp"
                 android:layout_marginBottom="36dp" />
 
             <LinearLayout
@@ -48,9 +50,9 @@
                        android:orientation="vertical">
 
                        <com.google.android.material.textfield.TextInputEditText
-                           style="@style/Title3"
-                           android:text="Минск"
-                           android:hint="Откуда - Москва"
+                           android:id="@+id/source"
+                           style="@style/TextInput3"
+                           android:hint="@string/default_source"
                            android:background="@null"/>
 
                        <LinearLayout
@@ -60,54 +62,45 @@
                            android:layout_marginVertical="8dp"/>
 
                        <TextView
+                           android:id="@+id/destination"
                            style="@style/Title3"
-                           android:hint="Куда - Турция"/>
+                           android:hint="@string/default_destination"/>
                    </LinearLayout>
                </LinearLayout>
+                <TextView
+                    android:id="@+id/source_error"
+                    android:visibility="gone"
+                    android:layout_marginTop="15dp"
+                    style="@style/Text2"
+                    android:text="@string/enter_source_country"
+                    android:textColor="@color/red"/>
            </LinearLayout>
 
             <TextView
+                android:id="@+id/h2_air_tickets"
                 style="@style/Title1"
                 android:layout_width="match_parent"
                 android:text="@string/h2_air_tickets"
                 android:layout_marginBottom="19dp"/>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:orientation="horizontal"
+                android:layout_marginEnd="-67dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginEnd="67dp">
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                />
 
-                 <androidx.cardview.widget.CardView
-                     android:layout_width="132dp"
-                     android:layout_height="132dp"
-                     app:cardCornerRadius="16dp"
-                     android:layout_marginBottom="4dp">
-                     <ImageView
-                         android:scaleType="centerCrop"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:src="@drawable/air_tickets_pic_1"
-                         />
-                 </androidx.cardview.widget.CardView>
-
-                <TextView
-                    style="@style/Text1"
-                    android:text="Die Antwoord"
-                    android:layout_marginBottom="1dp"/>
-
-                <TextView
-                    style="@style/Text2"
-                    android:text="Будапешт"
-                    android:layout_marginBottom="4dp"/>
-
-                <TextView
-                    style="@style/Text2"
-                    android:text="от 22 264 ₽"
-                    app:drawableStartCompat="@drawable/air_tickets"
-                    app:drawableTint="@color/grey6" />
-
-            </LinearLayout>
+            <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+                android:id="@+id/bottom_sheet_drag_handle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:textAlignment="center"
+                />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.constraintlayout.widget.ConstraintLayout>

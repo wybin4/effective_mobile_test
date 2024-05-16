@@ -3,28 +3,68 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_air_tickets">
+    app:startDestination="@+id/main_air_ticket">
 
     <fragment
-        android:id="@+id/navigation_air_tickets"
-        android:name="com.example.airtickets.ui.airticket.AirTicketMainView"
+        android:id="@+id/main_air_ticket"
+        android:name="com.example.airtickets.ui.features.airticket.main.AirTicketMainView"
         android:label="@string/title_air_tickets"
-        tools:layout="@layout/air_ticket_main" />
+        tools:layout="@layout/air_ticket_main">
+
+        <action
+            android:id="@+id/action_airTicketMain_to_airTicketSearchCountry"
+            app:destination="@id/search_country_air_ticket"/>
+
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_hotels"
+        android:id="@+id/search_country_air_ticket"
+        android:name="com.example.airtickets.ui.features.airticket.searchcountry.AirTicketSearchCountryView"
+        android:label="@string/title_air_tickets"
+        tools:layout="@layout/air_ticket_search_country">
+
+        <action
+            android:id="@+id/action_airTicketSearchCountry_to_airTicketMain"
+            app:destination="@id/main_air_ticket"/>
+        <action
+            android:id="@+id/action_airTicketSearchCountry_to_airTicketAll"
+            app:destination="@id/all_air_ticket"/>
+        <argument
+            android:name="sourceDest"
+            app:argType="com.example.airtickets.ui.features.airticket.models.AirTicketMainToSearchCountryParcelableModel" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/all_air_ticket"
+        android:name="com.example.airtickets.ui.features.airticket.all.AirTicketAllView"
+        android:label="@string/title_air_tickets"
+        tools:layout="@layout/air_ticket_all">
+
+        <action
+            android:id="@+id/action_airTicketAll_to_airTicketSearchCountry"
+            app:destination="@id/search_country_air_ticket"/>
+        <argument
+            android:name="sourceDest"
+            app:argType="com.example.airtickets.ui.features.airticket.models.AirTicketSearchCountryToAllParcelableModel" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/main_hotels"
         android:label="@string/title_hotels"/>
 
     <fragment
-        android:id="@+id/navigation_subscriptions"
+        android:id="@+id/main_subscriptions"
         android:label="@string/title_subscriptions" />
 
     <fragment
-        android:id="@+id/navigation_brief"
+        android:id="@+id/main_brief"
         android:label="@string/title_brief" />
 
     <fragment
-        android:id="@+id/navigation_profile"
+        android:id="@+id/main_profile"
         android:label="@string/title_profile" />
 
 </navigation>

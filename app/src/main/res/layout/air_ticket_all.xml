@@ -2,6 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.airtickets.ui.features.airticket.all.AirTicketAllViewModel" />
+    </data>
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,237 +20,18 @@
             android:layout_marginHorizontal="15dp"
             android:orientation="vertical"
             >
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/grey2"
-                android:orientation="horizontal"
-                android:paddingVertical="10dp"
-                android:paddingHorizontal="5dp"
-                android:layout_marginBottom="34dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/back"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="8dp"
-                    app:tint="@color/blue" />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/grey2"
-                    android:orientation="vertical"
-                    >
-                    <TextView
-                        style="@style/Title3"
-                        android:text="Москва-Сочи"/>
-                    <TextView
-                        style="@style/Title4Italic"
-                        android:textColor="@color/grey6"
-                        android:text="23 февраля, 1 пассажир"/>
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    style="@style/TicketCard"
-                    android:layout_marginBottom="24dp"
-                    android:orientation="vertical"
-                    android:paddingHorizontal="16dp"
-                    android:paddingTop="16dp"
-                    android:paddingBottom="20dp"
-                    android:layout_marginTop="13dp"
-                    >
-                    <TextView
-                        style="@style/Title1"
-                        android:text="6 990 ₽"
-                        android:layout_marginBottom="16dp"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            style="@style/Circle24"
-                            android:backgroundTint="@color/red"
-                            android:layout_gravity="center"
-                            />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginEnd="8dp">
-                                <TextView
-                                    style="@style/Title4Italic"
-                                    android:layout_weight="1"
-                                    android:text="03:15"
-                                    android:layout_marginBottom="2dp"/>
-                                <TextView
-                                    android:text="VKO"
-                                    style="@style/Title4Italic"
-                                    android:textColor="@color/grey6"/>
-                            </LinearLayout>
-
-                            <TextView
-                                android:text="@string/dash"
-                                style="@style/Title4Italic"
-                                android:textColor="@color/grey6"/>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginStart="8dp">
-                                <TextView
-                                    style="@style/Title4Italic"
-                                    android:layout_weight="1"
-                                    android:text="07:10"
-                                    android:layout_marginBottom="2dp"/>
-                                <TextView
-                                    android:text="AER"
-                                    style="@style/Title4Italic"
-                                    android:textColor="@color/grey6"/>
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_weight="1"
-                                android:gravity="end"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:text="4ч в пути"
-                                    style="@style/Text2"/>
-                                <TextView
-                                    android:text="@string/slash"
-                                    android:textColor="@color/grey6"
-                                    style="@style/Text2"/>
-                                <TextView
-                                    android:text="Без пересадок"
-                                    style="@style/Text2"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/circle_50dp"
-                    android:backgroundTint="@color/blue"
-                    android:paddingVertical="2dp"
-                    android:paddingHorizontal="10dp"
-                    >
-                    <TextView
-                        style="@style/Title4"
-                        android:text="Самый удобный"/>
-                </LinearLayout>
-            </FrameLayout>
-
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    style="@style/TicketCard"
-                    android:layout_marginBottom="24dp"
-                    android:orientation="vertical"
-                    android:paddingHorizontal="16dp"
-                    android:paddingTop="16dp"
-                    android:paddingBottom="20dp"
-                    >
-                    <TextView
-                        style="@style/Title1"
-                        android:text="7 386 ₽"
-                        android:layout_marginBottom="16dp"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            style="@style/Circle24"
-                            android:backgroundTint="@color/red"
-                            android:layout_gravity="center"
-                            />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginEnd="8dp">
-                                <TextView
-                                    style="@style/Title4Italic"
-                                    android:layout_weight="1"
-                                    android:text="03:15"
-                                    android:layout_marginBottom="2dp"/>
-                                <TextView
-                                    android:text="VKO"
-                                    style="@style/Title4Italic"
-                                    android:textColor="@color/grey6"/>
-                            </LinearLayout>
-
-                            <TextView
-                                android:text="@string/dash"
-                                style="@style/Title4Italic"
-                                android:textColor="@color/grey6"/>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:layout_marginStart="8dp">
-                                <TextView
-                                    style="@style/Title4Italic"
-                                    android:layout_weight="1"
-                                    android:text="07:10"
-                                    android:layout_marginBottom="2dp"/>
-                                <TextView
-                                    android:text="AER"
-                                    style="@style/Title4Italic"
-                                    android:textColor="@color/grey6"/>
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_weight="1"
-                                android:gravity="end"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <TextView
-                                    android:text="4ч в пути"
-                                    style="@style/Text2"/>
-                                <TextView
-                                    android:text="@string/slash"
-                                    android:textColor="@color/grey6"
-                                    style="@style/Text2"/>
-                                <TextView
-                                    android:text="Без пересадок"
-                                    style="@style/Text2"/>
-                            </LinearLayout>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </FrameLayout>
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginBottom="50dp"/>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/menu"
             style="@style/FloatingActionButton"
             android:layout_gravity="bottom|center_horizontal"
             app:layout_anchorGravity="bottom|center_horizontal"
@@ -252,6 +39,7 @@
             android:backgroundTint="@color/blue"
             android:background="@drawable/circle_50dp"
             android:padding="10dp"
+            android:layout_marginBottom="80dp"
             >
 
             <TextView

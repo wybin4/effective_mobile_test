@@ -15,8 +15,19 @@
     <string name="view_all_tickets">Посмотреть все билеты</string>
     <string name="show_all">Показать все</string>
     <string name="back">обратно</string>
-    <string name="filter">фильтры</string>
+    <string name="filter_mul">фильтры</string>
+    <string name="filter">Фильтр</string>
     <string name="price_chart">График цен</string>
     <string name="slash">/</string>
     <string name="dash">—</string>
+    <string name="phuket">Пхукет</string>
+    <string name="sochi">Сочи</string>
+    <string name="istanbul">Стамбул</string>
+    <string name="popular_destination">Популярное направление</string>
+    <string name="without_transfer">Без пересадок</string>
+    <string name="default_destination">Куда - Турция</string>
+    <string name="default_source">Откуда - Москва</string>
+    <string name="enter_source_country">Введите страну отправления</string>
+    <string name="stub">Упс! Пока что тут ничего нет</string>
+    <string name="back_from_stub">Назад</string>
 </resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="offer"
+            type="com.example.airtickets.ui.features.airticket.models.OfferUiModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="67dp">
+
+         <androidx.cardview.widget.CardView
+             android:layout_width="132dp"
+             android:layout_height="132dp"
+             app:cardCornerRadius="16dp"
+             android:layout_marginBottom="4dp">
+             <ImageView
+                 android:scaleType="centerCrop"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@{offer.getImage()}"
+                 />
+         </androidx.cardview.widget.CardView>
+
+        <TextView
+            style="@style/Text1"
+            android:text="@{offer.title}"
+            android:layout_marginBottom="1dp"/>
+
+        <TextView
+            style="@style/Text2"
+            android:text="@{offer.town}"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            style="@style/Text2"
+            android:text="@{offer.formatPrice()}"
+            app:drawableStartCompat="@drawable/air_tickets"
+            app:drawableTint="@color/grey6" />
+
+    </LinearLayout>
+
+</layout>

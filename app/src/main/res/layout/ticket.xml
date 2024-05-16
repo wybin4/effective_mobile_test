@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="ticket"
+            type="com.example.airtickets.ui.features.airticket.models.TicketUiModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            style="@style/TicketCard"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="20dp"
+            android:layout_marginTop="13dp"
+            >
+            <TextView
+                style="@style/Title1"
+                android:text="@{ticket.formatPrice()}"
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/Circle24"
+                    android:backgroundTint="@color/red"
+                    android:layout_gravity="center"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="8dp">
+                        <TextView
+                            style="@style/Title4Italic"
+                            android:layout_weight="1"
+                            android:text="@{ticket.departureTime()}"
+                            android:layout_marginBottom="2dp"/>
+                        <TextView
+                            android:text="@{ticket.departureAirport}"
+                            style="@style/Title4Italic"
+                            android:textColor="@color/grey6"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:text="@string/dash"
+                        style="@style/Title4Italic"
+                        android:textColor="@color/grey6"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="8dp">
+                        <TextView
+                            style="@style/Title4Italic"
+                            android:layout_weight="1"
+                            android:text="@{ticket.arrivalTime()}"
+                            android:layout_marginBottom="2dp"/>
+                        <TextView
+                            android:text="@{ticket.arrivalAirport}"
+                            style="@style/Title4Italic"
+                            android:textColor="@color/grey6"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:text="@{ticket.flightDuration()}"
+                            style="@style/Text2"/>
+                        <TextView
+                            android:visibility="@{!ticket.hasTransfer}"
+                            android:text="@string/slash"
+                            android:textColor="@color/grey6"
+                            style="@style/Text2"
+                            android:layout_marginHorizontal="4dp"/>
+                        <TextView
+                            android:visibility="@{!ticket.hasTransfer}"
+                            android:text="@string/without_transfer"
+                            style="@style/Text2"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="@{ticket.hasBadge()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_50dp"
+            android:backgroundTint="@color/blue"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="10dp"
+            >
+            <TextView
+                style="@style/Title4"
+                android:text="@{ticket.badge}"/>
+        </LinearLayout>
+    </FrameLayout>
+
+</layout>
